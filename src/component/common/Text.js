@@ -2,7 +2,6 @@ import { Text as MainText } from "react-native";
 import React, { useCallback, useEffect } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { useCallback, useEffect } from "react";
 
 export const Text = ({
   textStyle,

@@ -1,5 +1,5 @@
 import { Text as MainText } from "react-native";
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 
 export const TextBold = ({
   textStyle,

@@ -6,13 +6,12 @@ import {
   signOut,
   onAuthStateChanged,
   GoogleAuthProvider,
-  signInWithRedirect
+  signInWithRedirect,
 } from "firebase/auth";
-
 
 const AuthContext = createContext();
 
-const Provider = new GoogleAuthProvider()
+const Provider = new GoogleAuthProvider();
 
 export const useUserAuth = () => {
   return useContext(AuthContext);
@@ -30,10 +29,10 @@ export const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-    const googleLogIn = () => {
-        Provider.addScope("email")
-        Provider.addScope("profile")
-        await signInWithRedirect(auth, Provider)
+  const googleLogIn = () => {
+    Provider.addScope("email");
+    Provider.addScope("profile");
+    return signInWithRedirect(auth, Provider);
   };
 
   const logOut = () => {
@@ -54,7 +53,7 @@ export const AuthProvider = ({ children }) => {
         logIn,
         logOut,
         user,
-        googleLogIn
+        googleLogIn,
       }}
     >
       {children}

@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import registerRootComponent from "expo";
+import { registerRootComponent } from "expo";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { NavScreens } from "./NavigationScreens";
