@@ -9,8 +9,39 @@ export const TextBold = ({
   fontWeight,
   ...others
 }) => {
+  const [fontsLoaded] = useFonts({
+    NunitoBold: require("../../assets/font/Nunito-Bold.ttf"),
+  });
+
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
+
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
-    <MainText style={[textStyle, textAlign, fontSize, fontWeight]} {...others}>
+    <MainText
+      onLayout={onLayoutRootView}
+      style={[
+        textStyle,
+        textAlign,
+        fontSize,
+        fontWeight,
+        { fontFamily: "NunitoBold" },
+      ]}
+      {...others}
+    >
       {text}
     </MainText>
   );
