@@ -1,4 +1,4 @@
-import { auth } from "../../firebase/firebase-config";
+import { auth } from "../firebase/firebase-config";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,6 +7,7 @@ import {
   GoogleAuthProvider,
   signInWithRedirect
 } from "firebase/auth";
+
 
 const AuthContext = createContext();
 
@@ -32,7 +33,6 @@ export const AuthProvider = ({ children }) => {
         Provider.addScope("email")
         Provider.addScope("profile")
         await signInWithRedirect(auth, Provider)
-
   };
 
   const logOut = () => {

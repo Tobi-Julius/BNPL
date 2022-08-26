@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export const AuthSreens = () => {
+export const SignIn = () => {
   return (
     <View>
-      <Text>AuthSreens</Text>
+      <Text>SignIn</Text>
     </View>
   );
 };
