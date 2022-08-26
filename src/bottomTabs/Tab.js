@@ -8,8 +8,8 @@ export const Tab = () => {
   return (
     <Tabs.Navigator
       screenOptions={{
-      
-    }}
+        headerShown: false,
+      }}
     >
       <Tabs.Screen name="Home" component={Home} />
       <Tabs.Screen name="Product" component={Product} />
