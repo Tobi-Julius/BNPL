@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-export const Product = () => {
+const Product = () => {
   return (
     <View>
       <Text>Product</Text>
@@ -9,3 +9,6 @@ export const Product = () => {
   );
 };
 
+export default Product;
+
+const styles = StyleSheet.create({});

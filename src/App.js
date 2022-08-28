@@ -1,20 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { registerRootComponent } from "expo";
+import React from "react";
+import { Auth } from "./firebase/firebase-config";
+import { AuthProvider, useUserAuth } from "./context/AuthContext";
 import { NavigationContainer } from "@react-navigation/native";
-
-import { NavScreens } from "./NavigationScreens";
-
-import { AuthProvider } from "./context/AuthContext";
+import { AuthScreen } from "./AuthScreens";
+import { Tab } from "./bottomTabs";
 
 const App = () => {
+  // const { user } = useUserAuth();
+
   return (
     <AuthProvider>
       <NavigationContainer>
-        <StatusBar style="auto" />
-        <NavScreens />
+        {Auth ? <AuthScreen /> : <Tab />}
       </NavigationContainer>
     </AuthProvider>
   );
 };
 
-registerRootComponent(App);
+export default App;

@@ -1,4 +1,4 @@
-import { auth } from "../firebase/firebase-config";
+import { Auth } from "../firebase/firebase-config";
 import { useContext, createContext, useState, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -22,25 +22,25 @@ export const AuthProvider = ({ children }) => {
 
   // action
   const register = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(Auth, email, password);
   };
 
   const logIn = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(Auth, email, password);
   };
 
   const googleLogIn = () => {
     Provider.addScope("email");
     Provider.addScope("profile");
-    return signInWithRedirect(auth, Provider);
+    return signInWithRedirect(Auth, Provider);
   };
 
   const logOut = () => {
-    return signOut(auth);
+    return signOut(Auth);
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(Auth, (currentUser) => {
       setUser(currentUser);
     });
     return unsubscribe;
