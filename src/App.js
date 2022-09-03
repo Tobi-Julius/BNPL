@@ -1,19 +1,16 @@
 import React from "react";
-import { Auth } from "./firebase/firebase-config";
-import { AuthProvider, useUserAuth } from "./context/AuthContext";
-import { NavigationContainer } from "@react-navigation/native";
-import { AuthScreen } from "./AuthScreens";
-import { Tab } from "./bottomTabs";
+import { GlobalContext } from "./context/GlobalState";
+import { useFonts } from "./hooks";
+import NavigationContainer from "./navigation/NavigationContainer";
 
 const App = () => {
-  // const { user } = useUserAuth();
+  const { isAppReady } = useFonts();
+  console.warn(isAppReady);
 
-  return (
-    <AuthProvider>
-      <NavigationContainer>
-        {Auth ? <AuthScreen /> : <Tab />}
-      </NavigationContainer>
-    </AuthProvider>
+  return !isAppReady ? null : (
+    <GlobalContext>
+      <NavigationContainer />
+    </GlobalContext>
   );
 };
 

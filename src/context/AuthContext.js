@@ -49,10 +49,10 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider
       value={{
-        register,
+        user,
         logIn,
         logOut,
-        user,
+        register,
         googleLogIn,
       }}
     >

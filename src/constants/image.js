@@ -6,6 +6,7 @@ const shoe5 = require("../assets/image/shoe5.jpg");
 const shirt = require("../assets/image/shirt.jpg");
 const bag1 = require("../assets/image/bag1.jpg");
 const bag2 = require("../assets/image/bag2.jpg");
+const register = require("../assets/image/register.jpg");
 
 export const image = {
   shoe1,
@@ -16,4 +17,5 @@ export const image = {
   shirt,
   bag1,
   bag2,
+  register,
 };
