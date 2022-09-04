@@ -12,8 +12,11 @@ const MainBottomTabsNavigation = () => {
       screenOptions={{
         headerShown: false,
       }}
+      barStyle={{
+        backgroundColor: color.light,
+      }}
       activeColor={color.dark}
-      inactiveColor={color.light}
+      inactiveColor={color.gray3}
       labeled={false}
       initialRouteName="Home"
     >

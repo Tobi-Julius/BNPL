@@ -30,4 +30,9 @@ export const globalStyles = {
     justifyContent: "center",
     alignItem: "flex-start",
   },
+  columnCenter: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 };

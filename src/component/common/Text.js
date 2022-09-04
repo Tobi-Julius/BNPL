@@ -1,7 +1,4 @@
 import { Text as MainText } from "react-native";
-import React, { useCallback, useEffect } from "react";
-import { useFonts } from "expo-font";
-import * as SplashScreen from "expo-splash-screen";
 
 export const Text = ({
   textStyle,
@@ -11,40 +8,8 @@ export const Text = ({
   fontWeight,
   ...others
 }) => {
-  const [fontsLoaded] = useFonts({
-    Nunito: require("../../assets/font/Nunito-Regular.ttf"),
-  });
-
-  useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync();
-    }
-
-    prepare();
-  }, []);
-
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
-    <MainText
-      onLayout={onLayoutRootView}
-      style={[
-        textStyle,
-        textAlign,
-        fontSize,
-        fontWeight,
-        { fontFamily: "Nunito" },
-      ]}
-      {...others}
-    >
+    <MainText style={[textStyle, textAlign, fontSize, fontWeight]} {...others}>
       {text}
     </MainText>
   );

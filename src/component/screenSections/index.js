@@ -1,3 +1,4 @@
-import { HomeHeader } from "./HomeHeader/HomeHeader";
+import { HomeHeader } from "./HomeHeader";
+import { HomeBody } from "./HomeBody";
 
-export {HomeHeader}
+export { HomeHeader, HomeBody };

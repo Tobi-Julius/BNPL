@@ -6,4 +6,5 @@ export const color = {
   gray3: "#72727282",
   primary: "#98E8DD7D",
   secondary: "#E898DF7A",
+  tertiary: "#A0E8B3",
 };

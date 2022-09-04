@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { HomeHeader } from "../component/screenSections";
+import { HomeHeader, HomeBody } from "../component/screenSections";
 
 export const Home = () => {
   return (
-    <SafeAreaView>
+    <View>
       <HomeHeader />
-    </SafeAreaView>
+      <HomeBody />
+    </View>
   );
 };
 

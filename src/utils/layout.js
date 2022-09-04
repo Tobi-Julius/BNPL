@@ -4,8 +4,8 @@ const { width, height } = Dimensions.get("window");
 
 // base dimensions for android  w: 424, h: 942
 
-const widthBaseScale = width / 424;
-const heightBaseScale = height / 942;
+const widthBaseScale = width / 360;
+const heightBaseScale = height / 762;
 
 export const normalize = (size, based) => {
   const newSize =
@@ -44,12 +44,12 @@ const fontPixel = (size) => {
 };
 
 const fontSize = {
-  h1: normalize(26),
-  h2: normalize(23),
-  h3: normalize(20),
+  h1: normalize(24),
+  h2: normalize(21),
+  h3: normalize(19),
   h4: normalize(17),
   h5: normalize(14),
-  h6: normalize(10),
+  h6: normalize(9),
 };
 
 export default {

@@ -7,6 +7,9 @@ const shirt = require("../assets/image/shirt.jpg");
 const bag1 = require("../assets/image/bag1.jpg");
 const bag2 = require("../assets/image/bag2.jpg");
 const register = require("../assets/image/register.jpg");
+const adidas = require("../assets/image/adidas.png");
+const casio = require("../assets/image/casio.png");
+const offWhite = require("../assets/image/offWhite.png");
 
 export const image = {
   shoe1,
@@ -18,4 +21,7 @@ export const image = {
   bag1,
   bag2,
   register,
+  adidas,
+  casio,
+  offWhite,
 };

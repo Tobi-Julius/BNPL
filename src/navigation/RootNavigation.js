@@ -77,7 +77,7 @@ const RootNavigation = () => {
               style={[
                 globalStyles.rowCenter,
                 {
-                  marginLeft: layout.width * 0.1,
+                  marginLeft: layout.width * 0.05,
                   backgroundColor: color.light,
                   padding: layout.pixelSizeVertical(10),
                   borderRadius: layout.fontPixel(7),
@@ -93,7 +93,7 @@ const RootNavigation = () => {
                 globalStyles.rowBetween,
                 {
                   width: layout.widthPixel(70),
-                  marginRight: layout.width * 0.1,
+                  marginRight: layout.width * 0.05,
                 },
               ]}
             >
@@ -186,7 +186,7 @@ const RootNavigation = () => {
               style={[
                 globalStyles.rowCenter,
                 {
-                  marginLeft: layout.width * 0.1,
+                  marginLeft: layout.width * 0.05,
                   backgroundColor: color.light,
                   padding: layout.pixelSizeVertical(10),
                   borderRadius: layout.fontPixel(7),
@@ -207,7 +207,7 @@ const RootNavigation = () => {
                   backgroundColor: color.light,
                   padding: layout.pixelSizeVertical(11),
                   borderRadius: layout.fontPixel(7),
-                  marginRight: layout.width * 0.1,
+                  marginRight: layout.width * 0.05,
                 },
               ]}
             >
