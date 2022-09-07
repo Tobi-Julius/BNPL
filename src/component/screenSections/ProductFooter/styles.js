@@ -12,7 +12,7 @@ export const Styles = StyleSheet.create({
   productText: {
     fontSize: layout.size.h3,
     fontFamily: "Nunito_500Medium",
-    marginBottom: layout.pixelSizeHorizontal(5),
+    marginVertical: layout.pixelSizeVertical(10),
   },
   productInfo: {
     fontSize: layout.size.h4,
@@ -50,21 +50,19 @@ export const Styles = StyleSheet.create({
   payLaterTextBtn: {
     color: color.light,
     fontFamily: "Nunito_600SemiBold",
-    paddingVertical: layout.pixelSizeVertical(13),
-    paddingHorizontal: layout.pixelSizeHorizontal(20),
+    paddingHorizontal: layout.pixelSizeHorizontal(18),
     textTransform: "capitalize",
-    fontSize: layout.size.h3,
+    fontSize: layout.size.h4,
   },
   payLaterContainer: {
     borderRadius: layout.fontPixel(30),
     backgroundColor: color.dark,
-    paddingVertical: layout.pixelSizeVertical(4),
     paddingHorizontal: layout.pixelSizeHorizontal(8),
   },
   priceTextBtn: {
     color: color.dark,
     fontFamily: "Nunito_600SemiBold",
-    paddingVertical: layout.pixelSizeVertical(13),
+    paddingVertical: layout.pixelSizeVertical(10),
     paddingHorizontal: layout.pixelSizeHorizontal(20),
     textTransform: "capitalize",
     fontSize: layout.size.h3,

@@ -19,7 +19,7 @@ export const Adress = () => {
         style={[styles.adressContainer, globalStyles.rowBetween]}
       >
         <View style={[globalStyles.rowBetween, { alignItems: "center" }]}>
-          <Entypo name="location" color={color.dark} size={24} />
+          <Entypo name="location" style={styles.icon} color={color.dark} size={24} />
           <View style={styles.adress}>
             <Text textStyle={styles.area} text={area} />
             <Text textStyle={styles.state} text={state} />

@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Nunito_500Medium",
     fontSize: layout.size.h5,
     color: color.gray2,
+    marginVertical: layout.pixelSizeVertical(2),
   },
   interestFree: {
     textAlign: "center",
@@ -50,7 +51,7 @@ export const styles = StyleSheet.create({
   btnContainer: {
     backgroundColor: color.dark,
     borderRadius: layout.fontPixel(25),
-    marginVertical: layout.pixelSizeVertical(10),
+    marginVertical: layout.pixelSizeVertical(16),
   },
   btnText: {
     color: color.light,

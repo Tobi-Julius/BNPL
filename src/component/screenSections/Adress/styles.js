@@ -9,6 +9,12 @@ export const styles = StyleSheet.create({
   adressContainer: {
     alignItems: "center",
   },
+  icon: {
+    borderColor: "lightblue",
+    borderWidth: 1,
+    padding: layout.pixelSizeHorizontal(5),
+    borderRadius: layout.fontPixel(5),
+  },
   adress: {
     marginLeft: layout.pixelSizeHorizontal(15),
   },

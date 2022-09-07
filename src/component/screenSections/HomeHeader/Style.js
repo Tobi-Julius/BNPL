@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     marginVertical: layout.pixelSizeVertical(10),
   },
   nameText: {
-    fontSize: layout.size.h5,
+    fontSize: layout.size.h4,
     fontWeight: "600",
     fontFamily: "Nunito_500Medium",
     color: color.light,
@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
   upgradeText: {
     color: color.light,
     fontFamily: "Nunito_500Medium",
-    fontSize: layout.size.h6,
+    fontSize: layout.size.h5,
   },
   thirdContainer: {
     marginVertical: layout.pixelSizeVertical(10),
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
   iconName: {
     color: color.light,
     fontFamily: "Nunito_500Medium",
-    fontSize: layout.size.h6,
+    fontSize: layout.size.h5,
   },
   icon: {
     padding: layout.pixelSizeVertical(10),
