@@ -10,7 +10,7 @@ export const Featured = ({ leftText }) => {
     <View
       style={[
         globalStyles.rowBetween,
-        { marginVertical: layout.pixelSizeVertical(20) },
+        { marginVertical: layout.pixelSizeVertical(20), alignItems: "center" },
       ]}
     >
       <Text textStyle={styles.leftTextStyle} text={leftText} />
@@ -22,12 +22,12 @@ export const Featured = ({ leftText }) => {
 const styles = StyleSheet.create({
   leftTextStyle: {
     color: color.dark,
-    fontSize: layout.size.h4,
+    fontSize: layout.size.h3,
     fontFamily: "Nunito_600SemiBold",
   },
   rightTextStyle: {
     color: color.gray2,
-    fontSize: layout.size.h6,
+    fontSize: layout.size.h5,
     fontFamily: "Nunito_500Medium",
   },
 });

@@ -6,7 +6,7 @@ import { globalStyles } from "../globalStyles";
 import { layout } from "../utils";
 import { color, icon } from "../constants";
 import { Entypo, Ionicons } from "@expo/vector-icons";
-import { Image } from "react-native";
+import { Image, TouchableOpacity, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const Stack = createSharedElementStackNavigator();
@@ -27,21 +27,28 @@ const RootNavigation = () => {
       <Stack.Screen
         name="Product"
         component={Product}
-        // sharedElements={(route, otherRoute, showing) => {
-        //   const {id} = route.params
-        //   return [
-        //     {
-        //       id:,
-        //       animation:,
-        //       align:,
-        //       resize:,
-        //     },
-        //   ]
-        // }}
-
+        sharedElements={(route, otherRoute, showing) => {
+          const { imageUri1, price, title } = route.params;
+          return [
+            {
+              id: `item.${imageUri1}.imageUri`,
+              animation: "move",
+              resize: "clip",
+            },
+            {
+              id: `item.${price}.price`,
+              animation: "fade-in",
+              resize: "stretch",
+            },
+            {
+              id: `item.${title}.title`,
+              animation: "fade-in",
+              resize: "stretch",
+            },
+          ];
+        }}
         options={{
           animationEnabled: true,
-
           headerTransparent: true,
           headerShown: true,
           gestureEnabled: false,
@@ -92,7 +99,7 @@ const RootNavigation = () => {
               style={[
                 globalStyles.rowBetween,
                 {
-                  width: layout.widthPixel(70),
+                  width: layout.widthPixel(100),
                   marginRight: layout.width * 0.05,
                 },
               ]}
@@ -109,7 +116,7 @@ const RootNavigation = () => {
                   },
                 ]}
               >
-                <Entypo name="share-alternative" size={24} color="black" />
+                <Entypo name="share-alternative" size={20} color="black" />
               </TouchableOpacity>
               <TouchableOpacity
                 activeOpacity={0.7}
@@ -158,8 +165,17 @@ const RootNavigation = () => {
           animationDuration: 350,
           animationTypeForReplace: "push",
           customAnimationOnGesture: true,
-          title: "",
+          headerStyle: {
+            backgroundColor: "transparent",
+          },
+          headerTitleStyle: {
+            fontFamily: "Nunito_600SemiBold",
+            fontSize: layout.size.h3,
+          },
+          title: "Checkout",
           presentation: "card",
+          headerTitleAlign: "center",
+
           cardStyleInterpolator: ({ current, next }) => {
             const opacity = current.progress.interpolate({
               inputRange: [0, 1],

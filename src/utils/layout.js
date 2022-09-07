@@ -45,11 +45,11 @@ const fontPixel = (size) => {
 
 const fontSize = {
   h1: normalize(24),
-  h2: normalize(21),
-  h3: normalize(19),
-  h4: normalize(17),
-  h5: normalize(14),
-  h6: normalize(9),
+  h2: normalize(19),
+  h3: normalize(16),
+  h4: normalize(13),
+  h5: normalize(10),
+  h6: normalize(7),
 };
 
 export default {

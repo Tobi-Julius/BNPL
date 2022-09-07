@@ -1,4 +1,4 @@
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { layout } from "../../utils";
 import { Text } from "./Text";
@@ -14,7 +14,8 @@ export const Card = ({
   store,
 }) => {
   return (
-    <View
+    <TouchableOpacity
+      activeOpacity={0.6}
       key={id}
       style={[
         styles.container,
@@ -35,7 +36,7 @@ export const Card = ({
         <Text textStyle={styles.price} text={price} />
         <Text textStyle={styles.monthly} text="monthly" />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -44,8 +45,8 @@ const styles = StyleSheet.create({
     height: layout.heightPixel(150),
     width: layout.widthPixel(200),
     borderRadius: layout.fontPixel(8),
-    padding: layout.pixelSizeVertical(10),
-    paddingVertical: layout.pixelSizeVertical(20),
+    paddingHorizontal: layout.pixelSizeVertical(15),
+    paddingVertical: layout.pixelSizeVertical(15),
   },
   image: {
     height: layout.heightPixel(25),
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
   brand: {
     marginBottom: layout.pixelSizeVertical(6),
     fontFamily: "Nunito_600SemiBold",
-    fontSize: layout.size.h4,
+    fontSize: layout.size.h3,
   },
   timesRemaining: {
     marginBottom: layout.pixelSizeVertical(10),
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito_400Regular",
   },
   price: {
-    fontSize: layout.size.h4,
+    fontSize: layout.size.h,
     color: color.dark,
     fontFamily: "Nunito_600SemiBold",
   },

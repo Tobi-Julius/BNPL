@@ -11,6 +11,7 @@ export const Button = ({
 }) => {
   return (
     <TouchableOpacity
+      activeOpacity={0.4}
       disabled={disable}
       style={[btnContainer, { justifyContent: "center", alignItems: "center" }]}
       {...others}

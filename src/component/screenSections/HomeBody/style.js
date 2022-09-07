@@ -4,8 +4,11 @@ import { layout } from "../../../utils";
 export const Styles = StyleSheet.create({
   container: {
     width: layout.width * 0.9,
-    height: 800,
-    // borderColor: "red",
-    // borderWidth: 1,
+  },
+  scrollContainer: {
+    height: layout.heightPixel(150),
+  },
+  bottom: {
+    marginBottom: layout.pixelSizeVertical(320),
   },
 });
